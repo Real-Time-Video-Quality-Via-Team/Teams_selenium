@@ -187,7 +187,7 @@ public class TeamsSelenium extends Selenium {
     private boolean waitForRosterButton(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         try {
-            WebElement peopleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[aria-label='People']")));
+            WebElement peopleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@aria-label='People' or @aria-label='אנשים']")));
             return true ;
         } catch (Exception e) {
             return false ;
